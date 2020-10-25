@@ -29,17 +29,14 @@ class CategoryAdapter(private val dataset: List<Category>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val rootView = LayoutInflater.from(parent.context)
+            .inflate(R.layout.category_item, parent, false)
 
-        val rootView =
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.category_item, parent, false)
         return ViewHolder(rootView)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(
-            dataset[position]
-        )
+        holder.bind(dataset[position])
     }
 
     override fun getItemCount(): Int = dataset.size
