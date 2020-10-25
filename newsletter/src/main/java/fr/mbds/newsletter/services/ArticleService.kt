@@ -3,7 +3,6 @@ package fr.mbds.newsletter.services
 import fr.mbds.newsletter.model.Article
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Query
 
 interface ArticleService{
 

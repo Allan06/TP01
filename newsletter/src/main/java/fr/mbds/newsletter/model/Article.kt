@@ -3,7 +3,7 @@ package fr.mbds.newsletter.model
 import java.io.Serializable
 
 
-/* Classe basé sur l'exemple : https://medium.com/@sraju432/news-application-using-retrofit-2-be8d052c7aca */
+/* Classe basée sur l'exemple Java: https://medium.com/@sraju432/news-application-using-retrofit-2-be8d052c7aca */
 class Article(
     val source: Source,
     val url: String,

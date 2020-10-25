@@ -30,13 +30,16 @@ class CategoriesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
         val articles = listOf(
-            Category(name = "Politique", image = "https://picsum.photos/500/300"),
-            Category(name = "Economie", image = "https://picsum.photos/500/300"),
-            Category(name = "Education", image = "https://picsum.photos/500/300"),
-            Category(name = "Pandémie", image = "https://picsum.photos/500/300"),
-            Category(name = "Sciences", image = "https://picsum.photos/500/300"),
-            Category(name = "Ecologie", image = "https://picsum.photos/500/300"),
-            Category(name = "Santé", image = "https://picsum.photos/500/300"),
+            Category(name = "Politique", image = "https://picsum.photos/200?random=1"),
+            Category(name = "Economie", image = "https://picsum.photos/200?random=2"),
+            Category(name = "Education", image = "https://picsum.photos/200?random=3"),
+            Category(name = "Pandémie", image = "https://picsum.photos/200?random=4"),
+            Category(name = "Sciences", image = "https://picsum.photos/200?random=5"),
+            Category(name = "Ecologie", image = "https://picsum.photos/200?random=6"),
+            Category(name = "Santé", image = "https://picsum.photos/200?random=7"),
+            Category(name = "Sexe", image = "https://picsum.photos/200?random=8"),
+            Category(name = "Cassave", image = "https://picsum.photos/200?random=9"),
+            Category(name = "Pokémon", image = "https://picsum.photos/200?random=10")
         )
 
         val adapterRecycler = CategoryAdapter(articles)

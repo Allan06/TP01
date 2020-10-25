@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import fr.mbds.newsletter.R
 import fr.mbds.newsletter.model.Article
 
@@ -27,7 +28,12 @@ class ArticleAdapter (private val dataset: List<Article>):
             txtTitle.text = item.title
             txtDescription.text = item.description
 
-
+            Glide
+                .with(root)
+                .load(item.urlToImage)
+                .fitCenter()
+                .placeholder(R.drawable.placeholder)
+                .into(imageView);
         }
     }
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
