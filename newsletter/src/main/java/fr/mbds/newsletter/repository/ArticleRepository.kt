@@ -3,6 +3,7 @@ package fr.mbds.newsletter.repository
 import com.google.gson.Gson
 import fr.mbds.newsletter.BuildConfig
 import fr.mbds.newsletter.model.Article
+import fr.mbds.newsletter.model.Category
 import fr.mbds.newsletter.services.ArticleService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -28,19 +29,17 @@ class ArticleRepository {
             .connectTimeout(30, TimeUnit.SECONDS)
             .build()
 
-        val gsonConverterFactory = GsonConverterFactory.create(Gson())
-
         val retrofit = Retrofit.Builder().apply {
             baseUrl("https://newsapi.org/")
-            addConverterFactory(gsonConverterFactory)
+            addConverterFactory(GsonConverterFactory.create(Gson()))
             client(client)
         }.build()
 
         service = retrofit.create(ArticleService::class.java)
         }
 
-    fun list(): List<Article> {
-        val response = service.getArticles().execute()
+    fun list(category: Category): List<Article> {
+        val response = service.getArticles(category.name).execute()
         return response.body() ?: emptyList()
     }
 }

@@ -110,13 +110,14 @@ class CalculatriceActivity : AppCompatActivity() {
         }
     }
 
-    fun calculer(){
+    fun calculer(nombreTmp:String = ""){
 
         var car:Char
         var nombre1: String = ""
         var nombre2: String = ""
         var ope: Char = ' '
         var c:Int = 0
+
         while (c < expression.length()){
             car = expression.text.toString()[c]
 
@@ -136,6 +137,6 @@ class CalculatriceActivity : AppCompatActivity() {
         }
 
         resultat.append(operation(nombre1.toInt(), nombre2.toInt(), ope).toString())
-        //expression.text = ""
+        expression.text = ""
     }
 }

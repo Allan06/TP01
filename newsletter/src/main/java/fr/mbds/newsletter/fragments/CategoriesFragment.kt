@@ -30,16 +30,14 @@ class CategoriesFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.recycler_view)
 
         val articles = listOf(
-            Category(name = "Sexe",      image = "https://picsum.photos/200?random=1"),
-            Category(name = "Cassave",   image = "https://picsum.photos/200?random=2"),
-            Category(name = "Pokémon",   image = "https://picsum.photos/200?random=3"),
-            Category(name = "Politique", image = "https://picsum.photos/200?random=4"),
-            Category(name = "Economie",  image = "https://picsum.photos/200?random=5"),
-            Category(name = "Education", image = "https://picsum.photos/200?random=6"),
-            Category(name = "Pandémie",  image = "https://picsum.photos/200?random=7"),
-            Category(name = "Sciences",  image = "https://picsum.photos/200?random=8"),
-            Category(name = "Ecologie",  image = "https://picsum.photos/200?random=9"),
-            Category(name = "Santé",     image = "https://picsum.photos/200?random=10")
+            Category(name = "sex",       image = "https://picsum.photos/200?random=1"),
+            Category(name = "politic",   image = "https://picsum.photos/200?random=2"),
+            Category(name = "economy",   image = "https://picsum.photos/200?random=3"),
+            Category(name = "education", image = "https://picsum.photos/200?random=4"),
+            Category(name = "pandemic",  image = "https://picsum.photos/200?random=5"),
+            Category(name = "sciences",  image = "https://picsum.photos/200?random=6"),
+            Category(name = "ecology",   image = "https://picsum.photos/200?random=7"),
+            Category(name = "health",    image = "https://picsum.photos/200?random=8")
         )
 
         val adapterRecycler = CategoryAdapter(articles)
