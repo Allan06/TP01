@@ -4,4 +4,5 @@
     <string name = "title"> Title</string>
     <string name = "decription"> Description</string>
     <string name = "source"> Source</string>
+    <string name="apiKey">0e2c97075a8f4826adfdcd85df5f1838</string>
 </resources>

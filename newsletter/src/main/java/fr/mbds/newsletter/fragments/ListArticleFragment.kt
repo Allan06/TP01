@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import fr.mbds.newsletter.R
 import fr.mbds.newsletter.adapters.ArticleAdapter
-import fr.mbds.newsletter.databinding.FragmentArticlesBinding
 import fr.mbds.newsletter.model.Article
 import fr.mbds.newsletter.model.Category
 import fr.mbds.newsletter.repository.ArticleRepository
